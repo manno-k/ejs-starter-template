@@ -1,0 +1,16 @@
+{
+  "default": {
+    "title": "default title",
+    "description": "default description"
+  },
+
+  "home": {
+    "title": "document",
+    "description": "home description"
+  },
+
+  "contact": {
+    "title": "contact",
+    "description": "page description"
+  }
+}
