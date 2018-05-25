@@ -1,16 +1,16 @@
 {
   "default": {
-    "title": "未来を築く技術のトーアス | 製缶・配管・受託業務",
-    "description": "トーアス株式会社のホームページです。"
+    "title": "default title",
+    "description": "default description"
   },
 
   "home": {
-    "title": "未来を築く技術のトーアス | 製缶・配管・受託業務",
-    "description": "トーアス株式会社のホームページです。"
+    "title": "document",
+    "description": "home description"
   },
 
   "contact": {
-    "title": "お問い合せ",
-    "description": "トーアス株式会社のお問い合わせページです。"
+    "title": "contact",
+    "description": "page description"
   }
 }
