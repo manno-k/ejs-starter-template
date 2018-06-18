@@ -114,7 +114,7 @@ gulp.task('scss', function (){
 
 // メディアクエリを最適化
 gulp.task('combineMq', function () {
-    return gulp.src('./style.scss')
+    return gulp.src(path.cssDest + 'style.css')
         .pipe($.combineMq({
             beautify: false
         }))
@@ -124,7 +124,7 @@ gulp.task('combineMq', function () {
 
 // cssの圧縮
 gulp.task('cssmin', function () {
-    gulp.src('./style.scss')
+    gulp.src(path.cssDest + 'style.css')
         .pipe($.cssmin())
         .pipe($.rename({
             extname: '.min.css'
@@ -238,7 +238,7 @@ gulp.task('default', ['browser-sync'], function () {
     gulp.watch(path.sassPass, function () {
         return runSequence(
             'scss',
-            'combineMq',
+            // 'combineMq',
             'cssmin',
             'bs-reload'
         );
