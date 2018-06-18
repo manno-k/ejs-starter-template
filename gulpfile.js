@@ -47,11 +47,7 @@ var path = {
     'styleGuideDest': 'doc/styleguide/',
     'styleGuideOverview': 'doc/styleguide/styleguide.md',
     'styleGuideName': '',
-    'styleGuidePort': '4000',
-    // browser sync
-    // .localでは遅くなるため注意
-    'host': '',
-    'https': true
+    'styleGuidePort': '4000'
 };
 
 var sassLintConf = {
@@ -215,8 +211,10 @@ gulp.task("ejs", function () {
 
 gulp.task('browser-sync', function () {
     browserSync({
-        proxy: path.host,
-        https: path.https
+        server: {
+            baseDir: "./build/",
+            directory: false
+        }
     });
 });
 gulp.task('bs-reload', function () {
