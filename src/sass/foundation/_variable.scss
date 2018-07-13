@@ -1,3 +1,19 @@
 /*
 変数を格納しています。
  */
+
+* {
+  font-family: Georgia, 游明朝, "Yu Mincho", YuMincho, "Hiragino Mincho ProN", HGS明朝E, メイリオ, Meiryo, serif;
+}
+
+$base-blue: #0C5E94;
+$white: #fff;
+
+@keyframes bounce {
+  0%{
+    transform: translateY(0px);
+  }
+  100%{
+    transform: translateY(10px);
+  }
+}

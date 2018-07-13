@@ -1,0 +1,68 @@
+.l-index {
+  @extend .container-fluid;
+  &-wrap {
+  }
+
+  &-hero {
+    @extend .row;
+    @extend .m-0;
+    @extend .p-0;
+    position: relative;
+    dt, dd {
+      @extend .col-6;
+      margin: 0;
+      padding: 0;
+
+    }
+    dt {
+
+    }
+    dd {
+      @extend .align-self-center;
+      position: initial;
+      margin-top: 2rem;
+      padding: 2rem 2rem 2rem 3rem;
+
+      .js-index-hero {
+
+      }
+      .js-index-hero-h2 {
+        position: absolute;
+        bottom: -25px;
+        font-size: 3rem;
+        margin: 0;
+        padding: 4rem 1.5rem;
+        background: $base-blue;
+        color: $white;
+        -webkit-writing-mode: vertical-rl;
+        writing-mode: vertical-rl;
+        left: 40%;
+      }
+      .js-index-hero-bar {
+        display: block;
+        width: 100%;
+        height: 5px;
+        background: $base-blue;
+        margin: 0 0 0 auto;
+      }
+      .js-index-hero-p {
+        padding-top: 2rem;
+        font-size: 1.2rem;
+        line-height: 3rem;
+      }
+      .js-icon-scroll{
+        position: absolute;
+        right: 25%;
+        bottom: 0;
+        svg{
+          height: 50px;
+          circle{
+            width: 10px;
+            animation: bounce 2s ease-in-out alternate infinite;
+          }
+        }
+      }
+
+    }
+  }
+}
