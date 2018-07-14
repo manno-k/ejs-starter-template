@@ -1,6 +1,7 @@
 .l-index {
   @extend .container-fluid;
   &-wrap {
+    @extend .row;
   }
 
   &-hero {
@@ -18,25 +19,28 @@
 
     }
     dd {
-      @extend .align-self-center;
+      align-self: flex-end;
       position: initial;
-      margin-top: 2rem;
       padding: 2rem 2rem 2rem 3rem;
 
-      .js-index-hero {
-
-      }
       .js-index-hero-h2 {
         position: absolute;
-        bottom: -25px;
         font-size: 3rem;
         margin: 0;
-        padding: 4rem 1.5rem;
-        background: $base-blue;
+        left: 45.5%;
+        bottom: 6%;
         color: $white;
         -webkit-writing-mode: vertical-rl;
         writing-mode: vertical-rl;
-        left: 40%;
+        &-bg {
+          position: absolute;
+          bottom: -25px;
+          margin: 0;
+          background: $base-blue;
+          left: 44%;
+          width: 100px;
+          height: 464px;
+        }
       }
       .js-index-hero-bar {
         display: block;
@@ -49,20 +53,20 @@
         padding-top: 2rem;
         font-size: 1.2rem;
         line-height: 3rem;
+        font-weight: 500;
       }
-      .js-icon-scroll{
+      .js-icon-scroll {
         position: absolute;
         right: 25%;
         bottom: 0;
-        svg{
+        svg {
           height: 50px;
-          circle{
+          circle {
             width: 10px;
             animation: bounce 2s ease-in-out alternate infinite;
           }
         }
       }
-
     }
   }
 }

@@ -695,7 +695,7 @@ pre code {
     padding-right: 15px;
     padding-left: 15px; } }
 
-.row, .l-index-hero {
+.row, .l-index-wrap, .l-index-hero {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -707,22 +707,22 @@ pre code {
   margin-left: -15px; }
 
 @media (min-width: 576px) {
-  .row, .l-index-hero {
+  .row, .l-index-wrap, .l-index-hero {
     margin-right: -15px;
     margin-left: -15px; } }
 
 @media (min-width: 768px) {
-  .row, .l-index-hero {
+  .row, .l-index-wrap, .l-index-hero {
     margin-right: -15px;
     margin-left: -15px; } }
 
 @media (min-width: 992px) {
-  .row, .l-index-hero {
+  .row, .l-index-wrap, .l-index-hero {
     margin-right: -15px;
     margin-left: -15px; } }
 
 @media (min-width: 1200px) {
-  .row, .l-index-hero {
+  .row, .l-index-wrap, .l-index-hero {
     margin-right: -15px;
     margin-left: -15px; } }
 
@@ -2694,7 +2694,7 @@ a.bg-inverse:focus, a.bg-inverse:hover {
 .d-table-cell {
   display: table-cell !important; }
 
-.d-flex {
+.d-flex, .l-header {
   display: -webkit-box !important;
   display: -webkit-flex !important;
   display: -ms-flexbox !important;
@@ -2967,7 +2967,7 @@ a.bg-inverse:focus, a.bg-inverse:hover {
       -ms-flex-item-align: end !important;
           align-self: flex-end !important; }
 
-.align-self-center, .l-index-hero dd {
+.align-self-center, .l-header-nav {
   -webkit-align-self: center !important;
       -ms-flex-item-align: center !important;
           align-self: center !important; }
@@ -3691,7 +3691,7 @@ a.bg-inverse:focus, a.bg-inverse:hover {
 .mh-100 {
   max-height: 100% !important; }
 
-.m-0, .l-index-hero {
+.m-0, .c-nav-li, .l-header-nav, .l-index-hero {
   margin: 0 0 !important; }
 
 .mt-0 {
@@ -3829,7 +3829,7 @@ a.bg-inverse:focus, a.bg-inverse:hover {
   margin-top: 3rem !important;
   margin-bottom: 3rem !important; }
 
-.p-0, .l-index-hero {
+.p-0, .l-header-nav, .l-index-hero {
   padding: 0 0 !important; }
 
 .pt-0 {
@@ -4975,7 +4975,7 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
     display: none !important; } }
 
 @media (max-width: 991px) {
-  .hidden-md-down {
+  .hidden-md-down, .l-header-nav {
     display: none !important; } }
 
 @media (min-width: 992px) {
@@ -5106,7 +5106,7 @@ html {
     padding-right: 15px;
     padding-left: 15px; } }
 
-.row, .l-index-hero {
+.row, .l-index-wrap, .l-index-hero {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5118,22 +5118,22 @@ html {
   margin-left: -15px; }
 
 @media (min-width: 576px) {
-  .row, .l-index-hero {
+  .row, .l-index-wrap, .l-index-hero {
     margin-right: -15px;
     margin-left: -15px; } }
 
 @media (min-width: 768px) {
-  .row, .l-index-hero {
+  .row, .l-index-wrap, .l-index-hero {
     margin-right: -15px;
     margin-left: -15px; } }
 
 @media (min-width: 992px) {
-  .row, .l-index-hero {
+  .row, .l-index-wrap, .l-index-hero {
     margin-right: -15px;
     margin-left: -15px; } }
 
 @media (min-width: 1200px) {
-  .row, .l-index-hero {
+  .row, .l-index-wrap, .l-index-hero {
     margin-right: -15px;
     margin-left: -15px; } }
 
@@ -6453,9 +6453,55 @@ mixinをまとめています。
 /*
 uttility
  */
+.u-font-mplus1p {
+  font-family: "Mplus 1p"; }
+
 /*
 c-nav
  */
+.c-nav-li {
+  position: relative;
+  padding: 0 1rem;
+  display: inline-block;
+  z-index: 1; }
+
+@media (min-width: 768px) {
+  .c-nav-li {
+    padding: 0 1.5rem; } }
+
+@media (min-width: 992px) {
+  .c-nav-li {
+    padding: 0 1.5rem; } }
+
+@media (min-width: 1200px) {
+  .c-nav-li {
+    padding: 0 2rem; } }
+
+.c-nav-li a {
+  display: block;
+  width: 100%;
+  height: auto; }
+
+.c-nav-li:hover a, .c-nav-li:hover a:visited, .c-nav-li:hover a:hover, .c-nav-li:hover a:focus, .c-nav-li:hover a:active {
+  color: #fff;
+  position: relative;
+  z-index: 10; }
+
+.c-nav-li:hover .c-nav-bar {
+  height: 79px; }
+
+.c-nav-bar {
+  position: absolute;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  height: 0;
+  background: #0073A5;
+  bottom: -28px;
+  right: 0;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out; }
+
 /*
 c-sidebar
  */
@@ -6464,8 +6510,40 @@ l-header
  */
 .l-header {
   position: absolute;
+  top: 8%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   z-index: 2;
-  width: 100%; }
+  width: 80%;
+  padding: 1rem 2rem;
+  background-color: #fff;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-shadow: 2px 2px 6px rgba(2, 52, 74, .3), -2px -2px 6px rgba(2, 52, 74, .3);
+          box-shadow: 2px 2px 6px rgba(2, 52, 74, .3), -2px -2px 6px rgba(2, 52, 74, .3); }
+
+@media (min-width: 768px) {
+  .l-header {
+    top: 8%; } }
+
+@media (min-width: 992px) {
+  .l-header {
+    top: 12%; } }
+
+.l-header-logo {
+  margin: 0;
+  width: 120px; }
+
+.l-header-nav {
+  font-weight: bold; }
+
+.l-header-nav a, .l-header-nav a:visited, .l-header-nav a:hover, .l-header-nav a:focus, .l-header-nav a:active {
+  color: #000;
+  text-decoration: none; }
 
 /*
 l-footer
@@ -6481,35 +6559,45 @@ l-footer
   padding: 0; }
 
 .l-index-hero dd {
+  -webkit-align-self: flex-end;
+      -ms-flex-item-align: end;
+          align-self: flex-end;
   position: static;
   position: initial;
-  margin-top: 2rem;
   padding: 2rem 2rem 2rem 3rem; }
 
 .l-index-hero dd .js-index-hero-h2 {
   position: absolute;
-  bottom: -25px;
   font-size: 3rem;
   margin: 0;
-  padding: 4rem 1.5rem;
-  background: #0C5E94;
+  left: 45.5%;
+  bottom: 6%;
   color: #fff;
   -webkit-writing-mode: vertical-rl;
   -ms-writing-mode: tb-rl;
-      writing-mode: vertical-rl;
-  left: 40%; }
+      writing-mode: vertical-rl; }
+
+.l-index-hero dd .js-index-hero-h2-bg {
+  position: absolute;
+  bottom: -25px;
+  margin: 0;
+  background: #0073A5;
+  left: 44%;
+  width: 100px;
+  height: 464px; }
 
 .l-index-hero dd .js-index-hero-bar {
   display: block;
   width: 100%;
   height: 5px;
-  background: #0C5E94;
+  background: #0073A5;
   margin: 0 0 0 auto; }
 
 .l-index-hero dd .js-index-hero-p {
   padding-top: 2rem;
   font-size: 1.2rem;
-  line-height: 3rem; }
+  line-height: 3rem;
+  font-weight: 500; }
 
 .l-index-hero dd .js-icon-scroll {
   position: absolute;

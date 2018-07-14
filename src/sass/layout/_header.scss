@@ -1,8 +1,40 @@
 /*
 l-header
  */
-.l-header{
+.l-header {
+  @extend .d-flex;
   position: absolute;
+  top: 8%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   z-index: 2;
-  width: 100%;;
+  width: 80%;
+  padding: 1rem 2rem;
+  background-color: $white;
+  justify-content: space-between;
+  box-shadow: 2px 2px 6px $shadow, -2px -2px 6px $shadow;
+
+  @include media-breakpoint-up(md){
+    top: 8%;
+  }
+  @include media-breakpoint-up(lg){
+    top: 12%;
+  }
+
+  &-logo {
+    margin: 0;
+    width: 120px;
+  }
+  &-nav {
+    @extend .m-0;
+    @extend .p-0;
+    @extend .align-self-center;
+    @extend .hidden-md-down;
+
+    @include link_color($black) {
+      text-decoration: none;
+    }
+    font-weight: bold;
+  }
 }
+

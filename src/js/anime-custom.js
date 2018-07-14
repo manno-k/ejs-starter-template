@@ -1,3 +1,7 @@
+/*
+ * Index section
+ */
+
 $(window).on("load", function () {
 	var indexTopOffset = anime.timeline();
 	indexTopOffset
@@ -19,20 +23,29 @@ $(window).on("load", function () {
 		translateX: ['2000', '0'],
 		easing: 'easeOutExpo',
 		duration: 1000,
-		offset: '-=1000' // Starts 600ms before the previous animation ends
+		offset: '-=1000'
+	})
+	.add({
+		targets: '.js-index-hero-h2-bg',
+		height: ['0', '464'],
+		easing: 'easeOutExpo',
+		duration: 2000,
+		offset: '-=1000'
 	})
 	.add({
 		targets: '.js-index-hero-h2',
-		translateY: ['2000', '0'],
+		opacity: ['0', '1'],
 		easing: 'easeOutExpo',
 		duration: 2000,
-		offset: '-=1000' // Starts 600ms before the previous animation ends
+		offset: '-=1500'
 	})
 	.add({
 		targets: '.js-icon-scroll',
 		opacity: ['0', '1'],
 		easing: 'easeOutExpo',
 		duration: 2000,
+		offset: '-=1500'
 	})
 
 });
+
