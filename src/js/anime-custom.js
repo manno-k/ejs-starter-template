@@ -3,13 +3,24 @@
  */
 
 $(window).on("load", function () {
+	// loader
+
+	$('#js-loader').addClass('loaded');
+
 	var indexTopOffset = anime.timeline();
 	indexTopOffset
+	.add({
+		targets:'#js-loader.loaded',
+		opacity: ['1', '0'],
+		zIndex:['10','-1'],
+		easing: 'easeInOutQuint'
+	})
 	.add({
 		targets: '.js-index-hero',
 		translateX: ['-1000', '0'],
 		duration: 2000,
-		easing: 'easeInOutQuint'
+		easing: 'easeInOutQuint',
+		offset: '-=600'
 	})
 	.add({
 		targets: '.js-index-hero-bar',
@@ -40,7 +51,7 @@ $(window).on("load", function () {
 		offset: '-=1500'
 	})
 	.add({
-		targets: '.js-icon-scroll',
+		targets: ['.l-header','.js-icon-scroll'],
 		opacity: ['0', '1'],
 		easing: 'easeOutExpo',
 		duration: 2000,

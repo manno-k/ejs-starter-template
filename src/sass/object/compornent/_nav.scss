@@ -48,4 +48,10 @@ c-nav
     right: 0;
     transition: all .5s ease-in-out;
   }
+
+  &__sp {
+    @extend .hidden-lg-up;
+    @extend .d-flex;
+    align-self: center;
+  }
 }

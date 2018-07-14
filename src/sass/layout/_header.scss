@@ -4,9 +4,10 @@ l-header
 .l-header {
   @extend .d-flex;
   position: absolute;
-  top: 8%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 3%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
   z-index: 2;
   width: 80%;
   padding: 1rem 2rem;
@@ -14,26 +15,26 @@ l-header
   justify-content: space-between;
   box-shadow: 2px 2px 6px $shadow, -2px -2px 6px $shadow;
 
-  @include media-breakpoint-up(md){
-    top: 8%;
-  }
-  @include media-breakpoint-up(lg){
-    top: 12%;
+  @include media-breakpoint-up(lg) {
+    top: 5%;
   }
 
   &-logo {
     margin: 0;
-    width: 120px;
+    width: 100px;
+    @include media-breakpoint-up(md){
+      width: 120px;
+    }
   }
   &-nav {
     @extend .m-0;
     @extend .p-0;
     @extend .align-self-center;
     @extend .hidden-md-down;
-
     @include link_color($black) {
       text-decoration: none;
     }
+    border-radius: 2px;
     font-weight: bold;
   }
 }
