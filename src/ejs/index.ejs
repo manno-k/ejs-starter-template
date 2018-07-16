@@ -4,7 +4,7 @@ page: json['home']
 });
 %>
 <% include common/_header %>
-<main class="l-index">
+<main class="l-index u-max-width">
     <article class="l-index-wrap">
         <dl class="l-index-hero">
             <dt class="js-index-hero">
@@ -16,11 +16,71 @@ page: json['home']
                 <span class="js-index-hero-bar"></span>
                 <p class="js-index-hero-p u-font-mplus1p"><%- json.home.top_desc %></p>
                 <span class="js-icon-scroll">
-                    <svg  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12.99 21.04"><defs><style>.cls-1{fill:#202387;}</style></defs><title>home-banner-icon-mouse</title><path class="cls-1" d="M6.66,0H6.33A6.34,6.34,0,0,0,0,6.33v8.38A6.34,6.34,0,0,0,6.33,21h.33A6.34,6.34,0,0,0,13,14.71V6.33A6.34,6.34,0,0,0,6.66,0ZM12,14.71A5.33,5.33,0,0,1,6.66,20H6.33A5.33,5.33,0,0,1,1,14.71V6.33A5.33,5.33,0,0,1,6.33,1h.33A5.33,5.33,0,0,1,12,6.33Z"/><circle class="cls-1" cx="6.49" cy="5.75" r="1.75"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12.99 21.04"><defs><style>.cls-1 {
+                                    fill: #202387;
+                                }</style></defs><title>home-banner-icon-mouse</title><path class="cls-1" d="M6.66,0H6.33A6.34,6.34,0,0,0,0,6.33v8.38A6.34,6.34,0,0,0,6.33,21h.33A6.34,6.34,0,0,0,13,14.71V6.33A6.34,6.34,0,0,0,6.66,0ZM12,14.71A5.33,5.33,0,0,1,6.66,20H6.33A5.33,5.33,0,0,1,1,14.71V6.33A5.33,5.33,0,0,1,6.33,1h.33A5.33,5.33,0,0,1,12,6.33Z"/><circle class="cls-1" cx="6.49" cy="5.75" r="1.75"/></svg>
                 </span>
             </dd>
         </dl>
+        <section class="l-index-content u-max-width">
+            <div class="u-bg-blue">
+                <h2 class="u-font-gothic">OUR <span class="u-font-gothic">CONTENTS</span></h2>
+            </div>
+            <div class="l-index-content__wrap justify-content-around u-bg-blue">
+                <%
+                i = 1;
+                data = json.home.contents;
+                data.forEach(function (value) { %>
+                <dl class="l-index-content__card">
+                    <dt><img src="assets/img/index/content/content-<%= i %>.jpg" alt="<%= value.title %>"></dt>
+                    <dd>
+                        <h2 class="u-font-mplus1p"><%= value.title %></h2>
+                        <p class="u-font-mplus1p"><%= value.en %></p>
+                        <span class="inner ">
+                                <p class="desc u-font-mplus1p">
+                                    <%- value.desc %>
+                                </p>
+                                <span class="c-btn__border">
+                                    <a class="u-font-mplus1p" href="<%= value.link %>">詳細を見る</a>
+                                </span>
+                            </span>
+                    </dd>
+                </dl>
+                <%
+                    i++;
+                }); %>
+
+            </div>
+            <div class="u-bg-gray p-bg__bar"></div>
+            <div class="u-bg-blue l-index-service">
+                <span class="p-service__white-border"></span>
+                <h2 class="u-font-mplus1p">Our <span class="u-font-mplus1p">Service</span></h2>
+            </div>
+
+            <div class="l-index-service-content u-bg-blue">
+                <%
+                i = "1";
+                data = json.home.service;
+                data.forEach(function (value) { %>
+                <div class="desc service-order-<%= i %>">
+                    <% i++;%>
+                    <h2 class="u-font-mplus1p">
+                        <%- value.title %>
+                    </h2>
+                    <p class="u-font-mplus1p">
+                        <%- value.desc %>
+                    </p>
+                </div>
+                <div class="img service-order-<%= i %>">
+                    <% i++;%>
+                    <img src="assets/img/index/service/service-<%= value.id %>.jpg" alt="<%= value.title %>">
+                </div>
+                <% }); %>
+            </div>
+            <div class="u-bg-white p-bg__bar"></div>
+        </section>
     </article>
+
 </main>
 <% include common/_footer %>
 </div>

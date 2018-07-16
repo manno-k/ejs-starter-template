@@ -38,7 +38,7 @@ $(window).on("load", function () {
 	})
 	.add({
 		targets: '.js-index-hero-h2-bg',
-		height: ['0', '464'],
+		height: ['0', '100%'],
 		easing: 'easeOutExpo',
 		duration: 2000,
 		offset: '-=1000'

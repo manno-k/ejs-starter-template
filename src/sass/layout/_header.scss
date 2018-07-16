@@ -12,10 +12,10 @@ l-header
   width: 80%;
   padding: 1rem 2rem;
   background-color: $white;
-  justify-content: space-between;
   box-shadow: 2px 2px 6px $shadow, -2px -2px 6px $shadow;
-
+  justify-content: center;
   @include media-breakpoint-up(lg) {
+    justify-content: space-between;
     top: 5%;
   }
 
@@ -27,8 +27,7 @@ l-header
     }
   }
   &-nav {
-    @extend .m-0;
-    @extend .p-0;
+    @extend .u-mp-0;
     @extend .align-self-center;
     @extend .hidden-md-down;
     @include link_color($black) {

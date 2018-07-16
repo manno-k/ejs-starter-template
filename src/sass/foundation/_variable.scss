@@ -6,11 +6,29 @@
   font-family: Georgia, 游明朝, "Yu Mincho", YuMincho, "Hiragino Mincho ProN", HGS明朝E, メイリオ, Meiryo, serif;
 }
 
+/*
+Color
+ */
+
 $base-blue: #0073A5;
+$dark-blue: #02344A;
 $light-blue: #1F8bbA;
+$pastel-blue: #BEE3F1;
+$bg-blue: rgba(2, 52, 74, .8);
 $shadow: rgba(2, 52, 74, .3);
 $white: #fff;
 $nav-bg__bg: rgba(0, 0, 0, .7);
+$light-gray: #EBEBEB;
+
+/*
+size
+ */
+
+$max-width: 1440px;
+
+/*
+Keyframes
+ */
 
 @keyframes bounce {
   0% {

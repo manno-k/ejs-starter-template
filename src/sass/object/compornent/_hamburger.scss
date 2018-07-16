@@ -1,6 +1,10 @@
 .c-hamburger {
   $lineHeight: 3px;
   $lineWidth: 2rem;
+  position: absolute;
+  right: 10px;
+  top: 37%;
+
   .line {
     display: block;
     height: $lineHeight;
@@ -29,7 +33,7 @@
   &__inner {
     height: 0;
     position: absolute;
-    margin: 3rem 0 0 0;
+    margin: 2.3rem 0 0 0;
     padding: 0;
     width: 100%;
     left: 0;

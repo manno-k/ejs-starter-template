@@ -3,5 +3,12 @@ l-footer
  */
 
 .l-footer{
-  height: 1000px;
+  border-top: 15px solid $base-blue;
+  background: url("/assets/img/footer/footer-bg_sp.jpg") bottom center no-repeat fixed;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 500px;
+  @include media-breakpoint-up(lg){
+    background: url("/assets/img/footer/footer-bg.jpg") bottom center no-repeat fixed;
+  }
 }
