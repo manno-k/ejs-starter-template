@@ -101,4 +101,4 @@ style.scssで、Bootstarp/FontAwesomeの読み込みが可能です。
     }
   }
 }
-```
+```# toasu-renewd

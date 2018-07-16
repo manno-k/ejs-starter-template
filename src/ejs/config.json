@@ -1,16 +1,8 @@
 {
   "default": {
-    "title": "default title",
-    "description": "default description"
+    "title": "",
+    "description": "",
+    "link": ["contact.html",""]
   },
-
-  "home": {
-    "title": "document",
-    "description": "home description"
-  },
-
-  "contact": {
-    "title": "contact",
-    "description": "page description"
-  }
+  "common": ""
 }
