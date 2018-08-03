@@ -18,7 +18,7 @@
     "autoprefixer": "^7.1.2",
     "browser-sync": "^2.12.10",
     "caniuse-db": "^1.0.30000704",
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.0",
     "gulp-cheerio": "^0.6.2",
     "gulp-combine-mq": "^0.4.0",
     "gulp-concat": "^2.6.0",
