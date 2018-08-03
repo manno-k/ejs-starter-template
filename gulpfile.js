@@ -192,7 +192,7 @@ gulp.task('bs-reload', function () {
 });
 gulp.task('watch', function () {
 	gulp.watch(path.root + "**/*.html").on('change', browserSync.reload);
-	gulp.watch(path.root + "**/*.ejs", gulp.series('ejs')).on('change', browserSync.reload);
+	gulp.watch(path.root + "**/*.ejs", gulp.series('ejs'));
 	gulp.watch(path.jsPath, gulp.series('script'));
 	gulp.watch(path.sassPass, gulp.series('scss', 'cssmin' ));
 

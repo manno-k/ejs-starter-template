@@ -1,8 +1,15 @@
 {
   "default": {
     "title": "",
-    "description": "",
-    "link": ["contact.html",""]
+    "description": ""
   },
-  "common": ""
+  "common": "",
+  "home": {
+    "title": "",
+    "description": ""
+  },
+  "contact": {
+    "title": "",
+    "description": ""
+  }
 }
