@@ -73,6 +73,10 @@ TypeError: Cannot read property 'apply' of undefined
 
 ```
 
+#### Browser syncが表示されない
+`build`以下のファイルはgit clone時作成されていません。
+gulp起動後`src/ejs/`以下のファイルを一度更新すると、作成されるのでブラウザをリロードすると解消されます。
+
 #### gulp image
 `src/img`内の画像ファイルを圧縮し、`assets/img`に保存します。  
 
