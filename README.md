@@ -61,44 +61,36 @@ brawsersyncのアドレスなどをここで設定して下さい。
 ### コマンド
 #### gulp
 brawsersyncが起動。  
-※使用前にgulpfile.js要設定  
-※imgフォルダは監視対象外  
+※使用前に`gulpfileconfig.js`要設定  
+
+##### 起動しない場合
+以下のエラーが出た場合`npx gulp`で解消される場合があります。
+
+```javascript
+gulpInst.start.apply(gulpInst, toRun);                   
+
+TypeError: Cannot read property 'apply' of undefined
+
+```
 
 #### gulp image
 `src/img`内の画像ファイルを圧縮し、`assets/img`に保存します。  
-`src/img/svgSprite`内に設置したSVGファイルをSVGスプライトとして`assets/svg`に保存します。  
-SVGスプライトのID名、画像は`doc/svg/template.html`に保存されています。
 
-#### gulp test-sass
-sass lint を走らせます。
+## コーディング規約
 
-#### gulp style
-style guideを作成します。  
-sc5-styleguideを走らせてます。  
+`doc/`以下に下記のコーディング規約を保存しているため確認してください。
 
-## コード規約
-### Sass
-CSS設計にFLOCSSを採用。  
-style.scssで、Bootstarp/FontAwesomeの読み込みが可能です。
-必要に応じてコメントアウトを解除して下さい。
-
-#### mixin
-##### リンクカラー一括制御
-```sass
-@mixin link_color($color) {
-  a, a:visited, a:hover, a:focus, a:active {
-    color: $color;
-    @content;
-  }
-}
 ```
-##### IEにのみCSSを当てる
-```sass
-@mixin ie_only{
-  @media all and (-ms-high-contrast: none) {
-    *::-ms-backdrop, & {
-      @content;
-    }
-  }
-}
-```# toasu-renewd
+coding_guide.md: コーディング規約
+css.md: cssコーディング規約
+img.md: 画像ファイルの規約
+js.md: javascriptに関する規約
+```
+
+<!-- 以下、各種リンク -->
+
+[FLOCSS]: https://github.com/hiloki/flocss
+[MindBEMding]: https://github.com/juno/bem-methodology-ja/blob/master/definitions.md
+[Bootstarp]: https://getbootstrap.com/
+[slick]: http://kenwheeler.github.io/slick/
+[drawer]: https://github.com/blivesta/drawer

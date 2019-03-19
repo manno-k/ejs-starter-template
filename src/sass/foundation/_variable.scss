@@ -2,19 +2,22 @@
 変数を格納しています。
  */
 
+// font-size
 
+$fs-base: 14px;
+$fs-md: 16px;
+$fs-lg: 23px;
+$fs-xl: 28px;
+$fs-xxl: 32px;
 
-/*
-Color
- */
+// base-color
 
-$white: #fff;
+//sns
+$fb-blue: #3B5998;
+$line-green: #00BB00;
 
-/*
-size
- */
+// window max size
+$base-width: 1240px;
 
-
-/*
-Keyframes
- */
+// transition
+$transition-base: all .2s ease-in-out;
