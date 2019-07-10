@@ -16,12 +16,6 @@ for (var key in _default) {
 	<link rel="stylesheet" href="<%= path %>/assets/css/style.css">
 	<link rel="stylesheet" href="<%= path %>/assets/js/minified.js">
 	<link href="https://fonts.googleapis.com/earlyaccess/mplus1p.css" rel="stylesheet"/>
-	<title>
-		<%= page['title'] %>
-		<% if(page !== json['home']){ %>
-			-
-			<%= json['default']['title'] %>
-		<% } %>
-	</title>
+	<title><%= page['title'] %><% if(page !== json['home']){ %>-<%= json['default']['title'] %><% } %></title>
 </head>
 <body>
