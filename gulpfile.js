@@ -20,7 +20,8 @@ var
   changed = require("gulp-changed"),
   fs = require('fs'),
   ejs = require("gulp-ejs"),
-  rename = require("gulp-rename")
+  rename = require("gulp-rename"),
+  replace = require("gulp-replace")
 ;
 
 //---------------------------------------------------------------------------
@@ -119,6 +120,7 @@ gulp.task("ejs", function () {
   }))
   .pipe(ejs(json, {"ext": ".html"}))
   .pipe(rename({extname: ".html"}))
+  .pipe(replace(/[\s\S]*?(<!DOCTYPE)/, "$1"))
   .pipe(gulp.dest(config.ejs.dest))
 });
 
