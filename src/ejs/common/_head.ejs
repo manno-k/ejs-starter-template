@@ -1,27 +1,27 @@
 <%
 var _default = json['default'];
-for ( var key in _default ) {
-    if ( typeof page[key] === 'undefined' ) {
-        page[key] = _default[key];
-    }
+for (var key in _default) {
+	if (typeof page[key] === 'undefined') {
+		page[key] = _default[key];
+	}
 }
 -%>
 <!doctype html>
-<html >
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="description" content="<%= page['description'] %>">
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="./assets/js/minified.js">
-    <link href="https://fonts.googleapis.com/earlyaccess/mplus1p.css" rel="stylesheet" />
-    <title>
-        <%= page['title'] %>
-        <% if(page !== json['home']){ %>
-        -
-        <%= json['default']['title'] %>
-        <% } %>
-    </title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="description" content="<%= page['description'] %>">
+	<link rel="stylesheet" href="<%= path %>/assets/css/style.css">
+	<link rel="stylesheet" href="<%= path %>/assets/js/minified.js">
+	<link href="https://fonts.googleapis.com/earlyaccess/mplus1p.css" rel="stylesheet"/>
+	<title>
+		<%= page['title'] %>
+		<% if(page !== json['home']){ %>
+			-
+			<%= json['default']['title'] %>
+		<% } %>
+	</title>
 </head>
 <body>

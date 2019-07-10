@@ -11,5 +11,15 @@
   "contact": {
     "title": "",
     "description": ""
-  }
+  },
+  "nav": [
+    {
+      "link": "",
+      "title": "top"
+    },
+    {
+      "link": "contact",
+      "title": "contact"
+    }
+  ]
 }

@@ -1,3 +1,17 @@
+<%
+// config.jsonのnavを呼び出す
+data = json['nav'];
+%>
 <header class="l-header">
-header
+	header
+	<ul>
+		<%
+		// ナビメニュー
+		data.forEach(function (nav) {
+		%>
+			<a href="/<%= nav.link %>">
+				<%= nav.title %>
+			</a>
+		<% }) %>
+	</ul>
 </header>
