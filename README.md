@@ -18,6 +18,9 @@ root/
 　├ doc/
 　└ src/
 　　　└ ejs/
+　　　｜ └ index.ejs
+　　　｜ └ about/index.ejs
+　　　｜ └ contact/index.ejs
 　　　└ js/
 　　　└ sass/
 ```

@@ -207,3 +207,19 @@ alt属性がないとスクリーンリーダーが画像のパスを読み上�
 - [H37: img 要素の alt 属性を使用する | WCAG 2.0 達成方法集](https://waic.jp/docs/WCAG-TECHS/H37)
 - [alt属性の良い事例(つけ方・書き方)｜情報バリアフリーポータルサイト](http://jis8341.net/jirei_sample/jirei_chapter_01.html)
 
+
+
+### ACF
+ACFで出力する場合は下記を参考にしてください。
+- [image](https://www.advancedcustomfields.com/resources/image/)
+
+```
+<?php
+	$size        = 'full';
+	$blog_info = get_bloginfo();
+	$attr      = [
+			'alt' => $blog_info
+			];
+	echo wp_get_attachment_image($img , $size, 0, $attr ); ?>
+```
+
