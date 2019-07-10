@@ -19,6 +19,64 @@
 - html,ejs,css,jsを編集する際、不要なファイルや不要なクラスは削除して頂いて構いません。
 - プラグインの追加をする場合は、追加したプラグインの詳細等をRedmineに記す事。
 
+### pathに関して
+
+テンプレートで読み込む以下の`path`の項目を階層に合わせて変更してください。
+
+```
+<%-
+include('common/_head', {
+page: json['home'],
+path:'.'
+});
+%>
+
+第１階層：`.`
+第２階層：`..`
+第３階層：`...`
+```
+
+### ナビメニューに関して
+
+以下のコードで`config.json`内のナビメニューの設定が出力されるようにしています。
+必要の応じて編集して使用してください。
+`src/ejs/common/_header.ejs`
+```
+<%
+// config.jsonのnavを呼び出す
+data = json['nav'];
+%>
+<header class="l-header">
+	header
+	<ul>
+		<%
+		// ナビメニュー
+		data.forEach(function (nav) {
+		%>
+			<li>
+				<a href="/<%= nav.link %>">
+					<%= nav.title %>
+				</a>
+			</li>
+		<% }) %>
+	</ul>
+</header>
+```
+
+`src/ejs/config.json`
+```json
+"nav": [
+  {
+    "link": "",
+    "title": "top"
+  },
+  {
+    "link": "contact",
+    "title": "contact"
+  }
+]
+```
+
 ## 問い合わせフォーム等でphpを使用する場合
 
 src内に設置した場合buildされないので、build内に直接配置する。

@@ -9,9 +9,11 @@ data = json['nav'];
 		// ナビメニュー
 		data.forEach(function (nav) {
 		%>
-			<a href="/<%= nav.link %>">
-				<%= nav.title %>
-			</a>
+			<li>
+				<a href="/<%= nav.link %>">
+					<%= nav.title %>
+				</a>
+			</li>
 		<% }) %>
 	</ul>
 </header>
