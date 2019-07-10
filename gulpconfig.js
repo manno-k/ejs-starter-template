@@ -26,15 +26,13 @@ module.exports = {
     // まとめたいファイルをまとめたい順番に指定していく。
     // 指定していないファイルはminified.jsに圧縮されない。
     concat: [
-      // jQuery
-      'src/js/jquery-3.3.1.js',
       // ハンバーガーメニュー
       'src/js/hiraku.js',
       'src/js/hiraku-init.js',
       // スライダー
       'src/js/slick.js',
       'src/js/slick-init.js',
-      // smooth scroll polyfill
+      // smooth scroll
       'src/js/smoothscroll.js',
       // object-fit polyfill
       'src/js/ofi.js',
@@ -42,6 +40,10 @@ module.exports = {
       // scroll監視プラグイン
       // 'src/js/ScrollTrigger.js',
       // 'src/js/ScrollTrigger-init.js',
+      // bootstrap
+      'src/js/popper.js',
+      'src/js/bootstrap.js',
+
     ]
   },
   styles: {
