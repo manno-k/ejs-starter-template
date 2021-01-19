@@ -27,8 +27,8 @@ module.exports = {
     // 指定していないファイルはminified.jsに圧縮されない。
     concat: [
       // ハンバーガーメニュー
-      'src/js/hiraku.js',
-      'src/js/hiraku-init.js',
+      'src/js/drawer.js',
+      'src/js/drawer-init.js',
       // スライダー
       'src/js/slick.js',
       'src/js/slick-init.js',
