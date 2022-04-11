@@ -2,18 +2,18 @@
 // config.jsonのnavを呼び出す
 data = json['nav'];
 %>
-<header class="l-header">
-	header
-	<ul>
-		<%
-		// ナビメニュー
-		data.forEach(function (nav) {
-		%>
-			<li>
-				<a href="/<%= nav.link %>">
-					<%= nav.title %>
-				</a>
-			</li>
-		<% }) %>
-	</ul>
+<header class="l-header text-center py-3 bg-white">
+    <h1 class="my-0">
+        <img src="/assets/img/logo.png" alt="法人向け語学研修・英語研修 - 産経オンライン英会話Plus">
+    </h1>
 </header>
+
+<main>
+    <article>
+        <header class="l-index__hero">
+            <img class=" d-none d-lg-block" src="/assets/img/hero/banner@2x.jpg" alt="法人向け語学研修・英語研修 - 産経オンライン英会話Plus">
+            <img class=" d-lg-none" src="/assets/img/hero/sp-banner@2x.jpg" alt="法人向け語学研修・英語研修 - 産経オンライン英会話Plus">
+        </header>
+    </article>
+</main>
+

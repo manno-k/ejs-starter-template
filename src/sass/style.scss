@@ -39,7 +39,7 @@ Theme Sass file
 @import "layout/header";
 @import "layout/footer";
 // project
-@import "object/project/project";
+@import "object/project/index";
 
 // safariのカラム落ち対策
 .row {
@@ -47,4 +47,21 @@ Theme Sass file
 	&::after {
 		display: none;
 	}
+}
+// デフォルトフォント設定
+body,
+button,
+input,
+select,
+optgroup,
+textarea {
+	font-family: $font-family-base;
+}
+
+/*
+デフォルトスタイルの削除
+ */
+dl, dt, dd {
+	margin: 0;
+	padding: 0;
 }

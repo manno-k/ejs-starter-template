@@ -14,6 +14,10 @@ $fs-xxl: 4.37em; //70px
 
 
 // base-color
+$navy:#4068D5;
+$blue:#264DB9;
+$gray:#F8F8F8;
+
 
 //sns
 $fb-blue: #3B5998;
@@ -24,3 +28,9 @@ $base-width: 1240px;
 
 // transition
 $transition-base: all .2s ease-in-out;
+
+// base-font
+
+$font-family-gothic:source-han-sans-japanese, -apple-system, BlinkMacSystemFont, "Helvetica Neue", YuGothic, "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, "メイリオ", Meiryo, sans-serif !default;
+$font-family-mincho: Georgia, 游明朝, "Yu Mincho", YuMincho, "Hiragino Mincho ProN", HGS明朝E, メイリオ, Meiryo, serif !default;
+$font-family-base: $font-family-gothic;
