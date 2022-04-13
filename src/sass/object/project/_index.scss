@@ -3,7 +3,71 @@ p
  */
 
 .p-index {
-	&__hero {
+	&__wrap {
 
+	}
+
+	&__target {
+		&-title {
+			width: 25%;
+		}
+
+		&-illust {
+			margin-top: -3rem;
+			max-width: 210px;
+			@include media-breakpoint-up(lg) {
+				max-width: 100%;
+			}
+
+			&.no2 {
+				@include media-breakpoint-up(lg) {
+					max-width: 163px;
+				}
+			}
+		}
+
+		&-card {
+			width: 75%;
+			margin-left: auto;
+			background-color: $dark-gray;
+			border-radius: 15px 15px 15px 0;
+			box-shadow: 0 3px 6px #00000029;
+
+			@include media-breakpoint-up(lg) {
+				width: 100%;
+			}
+
+			h3 {
+				color: $blue;
+				font-size: $fs-h3;
+			}
+
+			p {
+				font-size: $fs-base;
+			}
+
+			.no {
+				margin-top: -65px;
+
+			}
+		}
+	}
+
+	&__reason {
+		background: url("../img/bg/bg-patern.png");
+
+		h2 img {
+			max-width: 700px;
+		}
+
+		&-card {
+			h3 {
+				color: $blue;
+				font-size: $fs-h3;
+			}
+			p {
+				font-size: $fs-base;
+			}
+		}
 	}
 }
