@@ -3,11 +3,20 @@ p
  */
 
 .p-index {
-	&__wrap {
 
+	&__hero {
+		margin-bottom: 3rem;
+		@include media-breakpoint-up(lg) {
+			margin-bottom: 8rem;
+		}
 	}
 
 	&__target {
+		margin-bottom: 3rem;
+		@include media-breakpoint-up(lg) {
+			margin-bottom: 3rem;
+		}
+
 		&-title {
 			width: 25%;
 		}
@@ -56,18 +65,96 @@ p
 	&__reason {
 		background: url("../img/bg/bg-patern.png");
 
-		h2 img {
-			max-width: 700px;
+		h2 {
+			padding: 2rem 0;
+			@include media-breakpoint-up(lg) {
+				padding: 3rem 0;
+			}
+
+			img {
+				max-width: 700px;
+			}
+		}
+
+		.col-lg-4 {
+			@include media-breakpoint-up(lg) {
+				@include flex-basis(32%);
+			}
 		}
 
 		&-card {
 			h3 {
 				color: $blue;
-				font-size: $fs-h3;
+				font-size: $fs-lg;
 			}
+
 			p {
 				font-size: $fs-base;
 			}
+
+			.no {
+				top: -2rem;
+			}
+
+			&:nth-child(1) .no {
+				@include svg-no-01(70px)
+			}
+
+			&:nth-child(2) .no {
+				@include svg-no-02(70px)
+			}
+
+			&:nth-child(3) .no {
+				@include svg-no-03(70px)
+			}
+
+			&:nth-child(4) .no {
+				@include svg-no-04(70px)
+			}
+
+			&:nth-child(5) .no {
+				@include svg-no-05(70px)
+			}
+
+			&:nth-child(6) .no {
+				@include svg-no-06(70px)
+			}
+
+			@for $i from 1 through 6 {
+				&:nth-child(#{$i}) .icon {
+					background: url("../img/reason/reasons-img0#{$i}@2x.png") center/contain no-repeat;
+					width: 100%;
+					height: 100px;
+				}
+			}
+		}
+	}
+
+	&__company {
+		h2 img {
+			max-width: 435px;
+		}
+
+		h3 {
+			color: $blue;
+			font-size: $fs-lg;
+		}
+
+		&-logo img {
+			@include flex-basis(24%);
+		}
+	}
+
+	&__flow {
+		background-color: $gray;
+		padding: 3rem 0;
+		@include media-breakpoint-up(lg) {
+			padding: 5rem 0;
+
+		}
+
+		h2 img {
+			max-width: 333px;
 		}
 	}
 }
